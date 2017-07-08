@@ -25,6 +25,9 @@ $router->add('posts', ['controller' => 'Post', 'action' => 'index']);
 //$router->add('posts/new', ['controller' => 'Posts', 'action' => 'new']);
 $router->add('{controller}/{action}');
 $router->add('{controller}/{id:\d+}/{action}');
+$router->add('admin/{controller}/{action}', [
+    'namespace' => 'Admin'
+]);
 
 //echo '<pre>';
 ////var_dump($router->getRoutes());
